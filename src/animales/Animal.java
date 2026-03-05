@@ -51,11 +51,18 @@ public abstract class Animal {
             this.peso = peso;
         }
     }
-
+    /**
+     * Devuelve el código identificativo del animal.
+     * @return código del animal
+     */
     public String getCodigo() {
         return codigo;
     }
-
+    /**
+    * Establece el código identificativo del animal.
+    * @param codigo nuevo código del animal
+    * @throws IllegalArgumentException si el código no tiene 5 caracteres alfanuméricos en minúscula
+    */
     public void setCodigo(String codigo) {
         if (!codigo.matches("[0-9a-z]{5}")) {
             throw new IllegalArgumentException();
@@ -147,11 +154,21 @@ public abstract class Animal {
     }
 
     public abstract String hacerSonido();
+    /**
+    * Describe el comportamiento del animal cuando está alegre.
+    * @return descripción del comportamiento
+    */
 
     public abstract String alegrarse();
-
+    /**
+    * Describe el comportamiento del animal cuando se enfada.
+    * @return descripción del comportamiento
+    */
     public abstract String enfadarse();
-
+    /**
+    * Indica qué tipo de animal es.
+    * @return tipo de animal
+    */
     public abstract String queSoy();
 
 }
